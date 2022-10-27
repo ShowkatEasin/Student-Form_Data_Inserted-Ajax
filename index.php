@@ -11,7 +11,58 @@
 <body>
     
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5 border border-success rounded p-3">
+            <h4>Add Student Form</h4>
+            <div class="form-group mt-2">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" class="studentName form-control">
+            </div>
 
+            <div class="form-group mt-2">
+                <label for="fName">Father's Name</label>
+                <input type="text" id="studentName" class="studentName form-control">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="mName">Mother's Name</label>
+                <input type="text" id="studentName" class="studentName form-control">
+            </div>
+            <div class="form-group mt-2">
+                <label for="email">Email Address</label>
+                <input type="text" id="studentName" class="studentName form-control">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="status">Status</label>
+               <select id="status" class="status form-control">
+               <option value="">--Select Status--</option>
+               <option value="1">Active</option>
+               <option value="2">Inactive</option>
+               </select>
+            </div>
+            <button class="addStudent btn btn-info mt-3">Add Student</button>
+            
+        </div>
+        <div class="col-md-7 border border-info rounded ml-2">
+            <h3>Student Data</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>SL No.</th>
+                        <th>Student Name</th>
+                        <th>Father's Name</th>
+                        <th>Mother's Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th colespan ="">Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
 
 
 
