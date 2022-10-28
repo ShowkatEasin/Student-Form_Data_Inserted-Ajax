@@ -13,7 +13,7 @@
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-5 border border-success rounded p-3">
+        <div class="col-md-5 border border-info rounded p-3">
             <h4>Add Student Form</h4>
             <div class="form-group mt-2">
                 <label for="studentName">Student Name</label>
@@ -45,8 +45,10 @@
             <button class="addStudent btn btn-info mt-3">Add Student</button>
             
         </div>
-        <div class="col-md-7 border border-info rounded ml-2">
-            <h3>Student Data</h3>
+        <div class="col-md-7 border border-info rounded">
+            <h4>Student Data</h4>
+            <button class="addNew
+            Student btn btn-success mt-3">Add New Student</button>
             <table class="table">
                 <thead>
                     <tr>
@@ -56,9 +58,12 @@
                         <th>Mother's Name</th>
                         <th>Email</th>
                         <th>Status</th>
-                        <th colespan ="">Action</th>
+                        <th colspan ="">Action</th>
                     </tr>
                 </thead>
+                <tbody class="tdata">
+                    
+                </tbody>
             </table>
         </div>
     </div>
