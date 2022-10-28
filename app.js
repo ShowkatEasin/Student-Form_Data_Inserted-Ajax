@@ -46,4 +46,22 @@ jQuery(document).ready(function(){
 			}
 		})
 	})
+
+    jQuery(document).on("click", ".btnActive", function(){
+    	var id = jQuery(this).val();
+    	$.ajax({
+			url:"function.php",
+			type:"POST",
+			data:{
+				'action':"active",
+				'id':id
+			},
+			success:function(response){
+				show();
+			}
+		})
+
+    })
+
+
 });

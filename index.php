@@ -59,7 +59,7 @@
                         <th>Student Name</th>
                         <th>Father's Name</th>
                         <th>Mother's Name</th>
-                        <th>Email</th>
+                        <th>Email Address</th>
                         <th>Status</th>
                         <th colspan ="2">Action</th>
                     </tr>

@@ -33,15 +33,24 @@ function show(){
 
         while($data = $obj->fetch_assoc()){
             $sl++;
+
+            if($data["status"]==1){
+
+                $status = "<button class='btnActive btn btn-success btn-sm value='".$data["student_id"]."'>Active</button>";
+            }
+            else{
+                $status = "<button class='btnInactive btn btn-warning btn-sm value='".$data["student_id"]."'>Inactive</button>";
+            }
+
             $tdata .='<tr>
             <td>'.$sl.'</td>
             <td>'.$data["studentName"].'</td>
             <td>'.$data["fName"].'</td>
             <td>'.$data["mName"].'</td>
             <td>'.$data["email"].'</td>
-            <td>'.$data["status"].'</td>
-            <td><a href="#" class "btn btn-info btn-sm"><i class="fa fa-edit"></i></a></td>
-            <td><a href="#" class "btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a></td>
+            <td>'.$status.'</td>
+            <td><button href="#" class="btnEdit btn btn-info btn-sm"><i class="fa fa-edit"></i></button></td>
+			<td><button href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
             
             </tr>';
 
@@ -51,4 +60,10 @@ function show(){
     else{
         echo "<tr> <td colspan='8' class ='alert alert-danger text-center'> Data Not Found </td> </tr>";
     }
+}
+
+function active(){
+	global $con;
+	$id = $_POST['id'];
+	$result = $con->query("UPDATE tbl_student SET status = '2' WHERE student_id = '$id'");
 }
