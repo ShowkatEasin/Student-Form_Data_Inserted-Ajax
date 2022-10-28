@@ -14,6 +14,9 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-5 border border-info rounded p-3">
+            <div class="msg">
+               
+            </div>
             <h4>Add Student Form</h4>
             <div class="form-group mt-2">
                 <label for="studentName">Student Name</label>
@@ -22,16 +25,17 @@
 
             <div class="form-group mt-2">
                 <label for="fName">Father's Name</label>
-                <input type="text" id="studentName" class="studentName form-control">
+                <input type="text" id="fName" class="fName form-control">
             </div>
 
             <div class="form-group mt-2">
-                <label for="mName">Mother's Name</label>
-                <input type="text" id="studentName" class="studentName form-control">
+                <label for="fName">Mother's Name</label>
+                <input type="text" id="mName" class="mName form-control">
             </div>
+
             <div class="form-group mt-2">
                 <label for="email">Email Address</label>
-                <input type="text" id="studentName" class="studentName form-control">
+                <input type="text" id="email" class="email form-control">
             </div>
 
             <div class="form-group mt-2">
@@ -46,9 +50,8 @@
             
         </div>
         <div class="col-md-7 border border-info rounded">
-            <h4>Student Data</h4>
-            <button class="addNew
-            Student btn btn-success mt-3">Add New Student</button>
+            <h4 class="mt-3">Student Data</h4>
+            <button class="addNewStudent btn btn-success mt-3">Add New Student</button>
             <table class="table">
                 <thead>
                     <tr>
@@ -58,7 +61,7 @@
                         <th>Mother's Name</th>
                         <th>Email</th>
                         <th>Status</th>
-                        <th colspan ="">Action</th>
+                        <th colspan ="2">Action</th>
                     </tr>
                 </thead>
                 <tbody class="tdata">
@@ -68,6 +71,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 
