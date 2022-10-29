@@ -63,5 +63,40 @@ jQuery(document).ready(function(){
 
     })
 
+	jQuery(document).on("click", ".btnInactive", function(){
+    	var id = jQuery(this).val();
+    	$.ajax({
+			url:"function.php",
+			type:"POST",
+			data:{
+				'action':"inactive",
+				'id':id
+			},
+			success:function(response){
+				show();
+			}
+		})
+
+    })
+
+	jQuery(document).on("click", ".btnDelete", function(){
+    	var id = jQuery(this).val();
+    	$.ajax({
+			url:"function.php",
+			type:"POST",
+			data:{
+				'action':"delete",
+				'id':id
+			},
+			success:function(response){
+				show();
+			}
+		})
+
+    })
+
+
+
+
 
 });

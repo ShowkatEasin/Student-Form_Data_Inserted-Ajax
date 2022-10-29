@@ -36,10 +36,10 @@ function show(){
 
             if($data["status"]==1){
 
-                $status = "<button class='btnActive btn btn-success btn-sm value='".$data["student_id"]."'>Active</button>";
+                $status = "<button class='btnActive btn btn-success btn-sm' value='".$data["student_id"]."'>Active</button>";
             }
             else{
-                $status = "<button class='btnInactive btn btn-warning btn-sm value='".$data["student_id"]."'>Inactive</button>";
+                $status = "<button class='btnInactive btn btn-warning btn-sm' value='".$data["student_id"]."'>Inactive</button>";
             }
 
             $tdata .='<tr>
@@ -50,7 +50,7 @@ function show(){
             <td>'.$data["email"].'</td>
             <td>'.$status.'</td>
             <td><button href="#" class="btnEdit btn btn-info btn-sm"><i class="fa fa-edit"></i></button></td>
-			<td><button href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
+			<td><button href="#" class="btnDelete btn btn-danger btn-sm" value="'.$data["student_id"].'"><i class="fa fa-trash"></i></button></td>
             
             </tr>';
 
@@ -67,3 +67,17 @@ function active(){
 	$id = $_POST['id'];
 	$result = $con->query("UPDATE tbl_student SET status = '2' WHERE student_id = '$id'");
 }
+function inactive(){
+	global $con;
+	$id = $_POST['id'];
+	$result = $con->query("UPDATE tbl_student SET status = '1' WHERE student_id = '$id'");
+}
+
+function delete(){
+	global $con;
+	$id = $_POST['id'];
+	$result = $con->query("DELETE FROM tbl_student WHERE student_id = '$id'");
+}
+
+
+
