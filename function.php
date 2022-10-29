@@ -50,7 +50,11 @@ function show(){
             <td>'.$data["email"].'</td>
             <td>'.$status.'</td>
             <td><button href="#" class="btnEdit btn btn-info btn-sm"><i class="fa fa-edit"></i></button></td>
-			<td><button href="#" class="btnDelete btn btn-danger btn-sm" value="'.$data["student_id"].'"><i class="fa fa-trash"></i></button></td>
+
+
+			<td><button data-bs-toggle= "modal" data-bs-target = "#forDelete"
+            class="btnDelete btn btn-danger btn-sm" value="'.$data["student_id"].'">
+            <i class="fa fa-trash"></i></button></td>
             
             </tr>';
 
