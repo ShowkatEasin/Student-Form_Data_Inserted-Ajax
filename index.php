@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-7 border border-info rounded">
             <h4 class="mt-3">Student Data</h4>
-            <button class="addNewStudent btn btn-success mt-3">Add New Student</button>
+            <button data-bs-toggle ="modal" data-bs-target ="#forInsert" class="addNewStudent btn btn-success mt-3">Add New Student</button>
             <table class="table">
                 <thead>
                     <tr>
@@ -73,7 +73,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- For Delete Modal -->
 
 <div class="modal fade" id="forDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -93,6 +93,46 @@
   </div>
 </div>
 
+
+<!-- For Inserted Modal -->
+
+<div class="modal fade" id="forInsert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Student</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <input type="text" class="form-control mt-3" id="MstudentName" placeholder="Enter Student Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control mt-3" id="MfName" placeholder="Enter your Fathers Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control mt-3" id="MmName" placeholder="Enter your Mothers Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control mt-3" id="Memail" placeholder="Enter your Email">
+        </div>
+        <div class="form-group">
+          <select id="Mstatus" class="form-control mt-3">
+            <option value="">-- Select Status --</option>
+            <option value="1">Active</option>
+            <option value="2">Inactive</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class=" MaddNew btn btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

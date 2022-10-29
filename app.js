@@ -119,4 +119,38 @@ jQuery(document).on("click", ".MbtnDelete", function(){
 
     })
 
+	
+	jQuery(".MaddNew").click(function(){
+		var studentName = jQuery("#MstudentName").val();
+		var fName = jQuery("#MfName").val();
+		var mName = jQuery("#MmName").val();
+		var email = jQuery("#Memail").val();
+		var status = jQuery("#Mstatus").val();
+		var action = "insert";
+
+		$.ajax({
+			url:"function.php",
+			type:"POST",
+			data:{
+				'studentName':studentName,
+				'fName':fName,
+				'email':email,
+				'mName':mName,
+				'status':status,
+				'action':action
+			},
+			success:function(response){
+				show();
+				jQuery(".msg").html(response);
+				jQuery(".msg").fadeOut(2000);
+				jQuery("#MstudentName").val("");
+				jQuery("#MfName").val("");
+				jQuery("#MmName").val("");
+				jQuery("#Memail").val("");
+				jQuery("#Mstatus").val("");
+				jQuery("#forInsert").modal("hide");
+			}
+		})
+	})
+
 });
